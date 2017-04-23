@@ -60,7 +60,7 @@ def validate_signature(uri, post_params, signature, auth_token):
 
 
 class RestAPI(object):
-    def __init__(self, auth_id, auth_token, url='https://api.plivo.com', version=PLIVO_VERSION):
+    def __init__(self, auth_id, auth_token, url='https://api.plivo.io', version=PLIVO_VERSION):
         self.version = version
         self.url = url.rstrip('/') + '/' + self.version
         self.auth_id = auth_id
