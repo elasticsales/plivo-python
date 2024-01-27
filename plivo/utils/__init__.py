@@ -64,7 +64,7 @@ def is_valid_mainaccount(mainaccount):
 
 
 def to_param_dict(func, vals, exclude_none=True, func_args_check=True):
-    args, varargs, kwargs, _ = inspect.getargspec(func)
+    args, varargs, kwargs, _, _, _, _ = inspect.getfullargspec(func)
     arg_names = list(args)
     # The bit of regex magic below is for arguments that are keywords in
     # Python, like from. These can't be used directly, so our convention is to
